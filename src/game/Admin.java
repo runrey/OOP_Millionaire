@@ -9,7 +9,7 @@ public class Admin extends People {
 		return "Hey, I am "+ this.getUsername() + " and I am Admin of this Game, cheaters go to HELL!";
 	}
 	
-	public void ConnecToDBMS() {
+	public void connectToDBMS() {
 		
 	}
 	
