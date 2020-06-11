@@ -32,6 +32,10 @@ public class Database {
 		return rs;
 	}
 	
+	public void insert(String query) throws SQLException {
+		stmt.executeUpdate(query);
+	}
+	
 	//setter and getter methods
 	public Statement getStmt() {
 		return stmt;
