@@ -18,10 +18,7 @@ public class Admin extends People {
 			System.out.println("Connection error: "+e.getMessage());
 		}
 	}
-	public static void main(String args[]) throws IOException, ClassNotFoundException, SQLException {
-		Admin n = new Admin(1,"asda", "asdas", "asda", "asd");
-		n.addQuestion("level", "question", "a", "b", "c", "d", "answer");
-	}
+	
 	public String say() {
 		return "Hey, I am "+ this.getUsername() + " and I am Admin of this Game, cheaters go to HELL!";
 	}
