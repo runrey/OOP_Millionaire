@@ -2,12 +2,14 @@ package game;
 
 public abstract class People {
 	//fields
+	private int id;
 	private String name;
 	private String surname;
 	private String username;
 	private String password;
 	
-	People(String name, String surname, String username, String password){
+	People(int id, String name, String surname, String username, String password){
+		this.setId(id);
 		this.setName(name);
 		this.setSurname(surname);
 		this.setUsername(username);
@@ -41,4 +43,12 @@ public abstract class People {
 	}
 	
 	public abstract String say();
+
+	public int getId() {
+		return id;
+	}
+
+	private void setId(int id) {
+		this.id = id;
+	}
 }

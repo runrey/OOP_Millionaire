@@ -1,8 +1,8 @@
 package game;
 
 public class Player extends People {
-	Player(String name, String surname, String username, String password){
-		super(name, surname, username, password);
+	Player(int id, String name, String surname, String username, String password){
+		super(id, name, surname, username, password);
 	}
 	
 	public String say() {

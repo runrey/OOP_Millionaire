@@ -1,8 +1,8 @@
-package game;
+	package game;
 
 public class Host extends People {
-	Host(String name, String surname, String username, String password){
-		super(name, surname, username, password);
+	public Host(int id, String name, String surname, String username, String password){
+		super(id, name, surname, username, password);
 	}
 	
 	public String say() {
