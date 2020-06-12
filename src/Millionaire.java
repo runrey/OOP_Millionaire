@@ -93,7 +93,7 @@ public class Millionaire {
 			if(admCheck) {
 				System.out.println(adm.say());
 				while(true) {
-					System.out.println("Please choose what you want to do, 1 to add new question, 0 to exit program");
+					System.out.println("Please choose what you want to do, 'add' to add new question, 'stop' to exit program");
 					String a = in.next();
 					if(a.equals("add")) {
 						System.out.println("Write level of difficulty, question, answer a, answer b, answer c, answer d, and correct answer");
