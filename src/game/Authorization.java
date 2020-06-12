@@ -1,6 +1,5 @@
 package game;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -15,9 +14,7 @@ public class Authorization {
 			System.out.println("Connection error: "+e.getMessage());
 		}
 	}
-	public static void main(String args[]) throws IOException, ClassNotFoundException, SQLException {
-		
-	}
+	
 	public Player auth(String username, String password) throws SQLException {
 		ResultSet rs = link.query("SELECT * FROM users WHERE user_name = '"+username+"' AND user_pass = '"+password+"'");
 		if(rs.next()) {
@@ -28,7 +25,7 @@ public class Authorization {
 	
 	public boolean sign(String username, String password, String fname, String lname) throws SQLException {
 		ResultSet rs = link.query("SELECT * FROM users WHERE user_name = '"+username+"'");
-		if(rs.next()) {
+		if(!rs.next()) {
 			link.insert("INSERT INTO users (fname, lname, user_name, user_pass) VALUES ('"+fname+"', '"+lname+"', '"+username+"', '"+password+"')");
 			return true;
 		}
